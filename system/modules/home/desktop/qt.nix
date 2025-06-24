@@ -4,6 +4,6 @@
   qt = {
     enable = true;
     platformTheme = "gtk";
-    style = "adwaita-dark";
+    style.name = "adwaita-dark";
   };
 }

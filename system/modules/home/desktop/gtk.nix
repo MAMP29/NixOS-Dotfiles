@@ -13,7 +13,7 @@
       name = "Catppuccin-Mocha-Standard-Blue-dark";
       package = pkgs.catppuccin-gtk.override {
         accents = [ "red" ];
-        variant = "Mocha";
+        variant = "mocha";
       };
     };
 
@@ -21,5 +21,5 @@
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
-  }
+  };
 }
