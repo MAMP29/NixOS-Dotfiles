@@ -88,6 +88,7 @@ in
    extraGroups = [ "networkmanager" "wheel" ]; # Enable ‘sudo’ for the user.
    packages = with pkgs; [
      tree
+     tidal-hifi
    ];
  };
 
