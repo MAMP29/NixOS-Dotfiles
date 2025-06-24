@@ -142,7 +142,6 @@ in
      git
 
      nemo-with-extensions
-     adwaita-icon-theme
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
