@@ -4,15 +4,24 @@
 
 { config, lib, pkgs, ... }:
 
-{
-  imports =
+
+let
+  home-manager = builtins.fetchTarball https://github.com/nix-community/home-manager/archive/release-25.05.tar.gz;
+in
+{  imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./modules/drivers/nvidia.nix
       ./modules/customization/fonts.nix
       ./modules/core/bluetooth.nix
       ./modules/core/mount.nix
+      (import "${home-manager}/nixos")
     ];
+
+  home-manager.useUserPackages = true;
+  home-manager.useGlobalPkgs = true;
+  home-manager.backupFileExtension = "backup";
+  home-manager.users.mamp = import ./home.nix;
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -27,6 +36,11 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
+
+
+  # Experimental features
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  
   # Set your time zone.
   time.timeZone = "America/Bogota";
 
@@ -72,14 +86,15 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
  users.users.mamp = {
    isNormalUser = true;
-   extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+   extraGroups = [ "networkmanager" "wheel" ]; # Enable ‘sudo’ for the user.
    packages = with pkgs; [
      tree
    ];
  };
 
   programs.firefox.enable = true;
-
+  programs.zsh.enable = true;
+  
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
    environment.systemPackages = with pkgs; [
