@@ -36,8 +36,6 @@ in
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
-
-
   # Experimental features
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
@@ -85,6 +83,7 @@ in
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
  users.users.mamp = {
+   shell = pkgs.zsh;
    isNormalUser = true;
    extraGroups = [ "networkmanager" "wheel" ]; # Enable ‘sudo’ for the user.
    packages = with pkgs; [
