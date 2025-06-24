@@ -1,0 +1,160 @@
+
+{
+    "layer": "top",
+    "position": "top",
+    "height": 38, // Aumenté un poco la altura para que el estilo respire mejor, ajústalo a tu gusto.
+    "spacing": 0, // Eliminamos el espaciado global, lo controlaremos con CSS.
+    "width": 1050,
+    "margin-top": 3,
+    
+    "modules-left": [
+        "custom/icon",
+        "hyprland/workspaces#roman",
+        "network",
+        "battery",
+        "bluetooth"
+        
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "tray",
+        "mpris",
+        "pulseaudio",
+        "pulseaudio#microphone",
+        "memory",
+        "cpu"
+    ],
+
+    // --- Definiciones de Módulos ---
+
+    "hyprland/window": {
+        "format": "  {}",
+        "separate-outputs": true
+    },
+    
+    // ROMAN Numerals style
+    "hyprland/workspaces#roman": {
+        "active-only": false,
+        "all-outputs": true,
+        "format": "{icon}",
+        "show-special": false,
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "persistent-workspaces": {
+        "*": 5
+        },
+        "format-icons": {
+            "1": "I",
+            "2": "II",
+            "3": "III",
+            "4": "IV",
+            "5": "V",
+            "6": "VI",
+            "7": "VII",
+            "8": "VIII",
+            "9": "IX",
+            "10": "X"
+        }
+    },
+
+    // AÑADIDO: Módulo separador para la línea vertical
+    "custom/separator": {
+        "format": "|",
+        "rotate": 0
+    },
+
+    "custom/icon": {
+        "format": "",
+        "rotate": 0
+    },
+
+    "tray": {
+        "icon-size": 15,
+        "spacing": 10
+    },
+
+    "clock": {
+        // FORMATO CAMBIADO: Mes (abreviado) | Día | Hora
+        "format": "{:%b | %d | %H:%M}",
+        "tooltip-format": "<big>{:%A, %d de %B de %Y}</big>\n<tt>{calendar}</tt>"
+    },
+
+    "mpris": {
+        "format": "{player_icon} {title}",
+        "format-paused": "󰏤 <i>{title}</i>",
+        "player-icons": {"default": ""},
+        "status-icons": {"paused": "󰏤"},
+        "ignored-players": ["firefox"]
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        // FORMATO CAMBIADO: Ahora muestra el porcentaje siempre
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰂄 {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["󰂃", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "bluetooth": {
+	    "format": "",
+	    "format-disabled": "", // Lo ocultamos si está deshabilitado para no ocupar espacio
+	    "format-connected": "",
+        "tooltip-format-connected": "{device_alias}",
+        "on-click": "blueman-manager"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "tooltip": false,
+        "format-muted": "  Muted",
+        "on-click": "pamixer -t",
+        "on-scroll-up": "pamixer -i 1",
+        "on-scroll-down": "pamixer -d 1",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["","", "", ""]
+        }
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "  Muted",
+        "on-click": "pamixer --default-source -t",
+        "on-scroll-up": "pamixer --default-source -i 5",
+        "on-scroll-down": "pamixer --default-source -d 5",
+        "scroll-step": 5
+    },
+
+    "memory": {
+        "interval": 10,
+        "format": "󰾆 {used:0.1f}G"
+    },
+
+    "cpu": {
+        "interval": 10,
+        "format": "󰍛 {usage}%"
+    },
+
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰖪",
+        "tooltip-format-disconnected": "Desconectado",
+        "on-click": "nm-connection-editor"
+    }
+}

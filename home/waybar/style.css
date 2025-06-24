@@ -1,0 +1,132 @@
+/* --- RESET Y ESTILOS GLOBALES --- */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: JetBrainsMono Nerd Font, monospace;
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 0;
+}
+
+/* La barra completa: fondo transparente */
+window#waybar {
+    background: rgba(0, 0, 0, 1); /* Negro semi-transparente, se ve mejor que 0% */
+    color: #cdd6f4; /* Color de texto por defecto (Blanco-azulado) */
+}
+
+/* --- ESTILO BASE PARA TODOS LOS MÓDULOS --- */
+/* Esto selecciona la "caja" de cada módulo para crear los bloques */
+#workspaces,
+#network,
+#battery,
+#bluetooth,
+#tray,
+#custom-separator,
+#custom-icon,
+#clock,
+#mpris,
+#pulseaudio,
+#memory,
+#cpu,
+#hyprland-window {
+    background-color: #000000; /* Fondo oscuro (Catppuccin Macchiato Base) */
+    padding: 0 10px;
+    margin: 5px 0; /* Margen vertical para que la barra no toque el borde de la pantalla */
+    color: #ffffff;
+    transition: all 0.3s ease; /* Animación suave para cambios */
+}
+
+/* --- GRUPOS DE MÓDULOS --- */
+/* Redondeamos solo los extremos de la barra */
+#workspaces {
+    border-radius: 0px 0 0 0px;
+    padding-left: 15px;
+}
+
+#hyprland-window {
+    border-radius: 0 0px 0px 0;
+    padding-right: 15px;
+}
+
+/* Separamos los grupos con márgenes en los separadores */
+#custom-separator {
+    background: transparent; /* Hacemos el fondo del separador invisible */
+    color: #45475a; /* Color gris para la línea '|' */
+    margin: 5px 0px; /* Espacio a los lados del separador */
+}
+
+/* Separamos los grupos con márgenes en los separadores */
+#custom-icon {
+    color: #ffffff; /* Color gris para la línea '|' */
+    margin: 5px 0px; /* Espacio a los lados del separador */
+}
+
+/* --- ESTILOS ESPECÍFICOS --- */
+
+/* Workspaces */
+#workspaces button {
+    padding: 0 5px;
+    color: #6c7086; /* Color para workspaces inactivos (gris) */
+}
+
+#workspaces button:hover {
+    color: #cdd6f4; /* Blanco al pasar el ratón */
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+#workspaces button.urgent {
+    color: #11111b;
+    background: #313244;
+    border-radius: 0px;
+}
+
+#workspaces button.active {
+    color: #b16a6a; /* PÚRPURA para el workspace activo */
+    font-size: 18px; /* Lo hacemos un poco más grande para destacarlo */
+}
+
+#workspaces button.empty {
+    color: #574343; /* PÚRPURA para el workspace activo */
+    font-size: 18px; /* Lo hacemos un poco más grande para destacarlo */
+}
+
+/* Tray (bandeja de sistema) */
+#tray {
+    padding: 0 12px;
+}
+
+/* Reloj */
+#clock {
+    font-weight: bold;
+    color: #ffffff; /* Rosa para el reloj */
+    border-radius: 0px;
+}
+
+/* Batería */
+#battery.critical {
+    color: #f38ba8; /* Rojo para batería crítica */
+    animation: blink 1.5s linear infinite;
+}
+
+/* Animación de parpadeo para la batería crítica */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 1; }
+}
+
+/* Mpris (música) */
+#mpris {
+    color: #89b4fa; /* Azul para la música */
+}
+
+/* Efecto hover general para los demás módulos */
+#network:hover,
+#battery:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#memory:hover,
+#cpu:hover {
+    background-color: #313244; /* Un poco más claro al pasar el ratón */
+}
