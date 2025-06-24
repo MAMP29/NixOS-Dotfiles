@@ -15,6 +15,7 @@ in
       ./modules/customization/fonts.nix
       ./modules/core/bluetooth.nix
       ./modules/core/mount.nix
+      ./modules/core/greetd.nix
       (import "${home-manager}/nixos")
     ];
 
