@@ -11,7 +11,7 @@
     enable = true;
 
     theme = {
-      name = "Catppuccin-Mocha-Red";
+      name = "catppuccin-mocha-red-standard";
       package = pkgs.catppuccin-gtk.override {
         accents = [ "red" ];
         variant = "mocha";
@@ -46,5 +46,4 @@
   };
 
   services.swayosd.enable = true;
-
 }

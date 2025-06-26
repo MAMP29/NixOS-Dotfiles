@@ -16,6 +16,7 @@ in
       ./modules/core/bluetooth.nix
       ./modules/core/mount.nix
       ./modules/core/greetd.nix
+      ./modules/core/swayosd.nix
       (import "${home-manager}/nixos")
     ];
 
@@ -109,7 +110,6 @@ in
      rofi
      waybar
      swaynotificationcenter
-     swayosd
      libnotify
      swww
      waypaper
