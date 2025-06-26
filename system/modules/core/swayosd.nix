@@ -17,5 +17,5 @@
       ExecStart = "${pkgs.swayosd}/bin/swayosd-libinput-backend";
       Restart = "on-failure";
     };
-  }
+  };
 }
