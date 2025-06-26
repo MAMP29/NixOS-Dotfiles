@@ -11,10 +11,11 @@
     partOf = [ "graphical.target" ];
     after = [ "graphical.target" ];
 
-  serviceConfig = {
-    Type = "dbus";
-    BusName = "org.erikreider.swayosd";
-    ExecStart = "${pkgs.swayosd}/bin/swayosd-libinput-backend";
-    Restart = "on-failure";
-  };
+    serviceConfig = {
+      Type = "dbus";
+      BusName = "org.erikreider.swayosd";
+      ExecStart = "${pkgs.swayosd}/bin/swayosd-libinput-backend";
+      Restart = "on-failure";
+    };
+  }
 }
