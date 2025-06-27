@@ -5,16 +5,17 @@
     catppuccin-gtk
     papirus-icon-theme
     adwaita-icon-theme
+    graphite-gtk-theme
   ];
 
   gtk = {
     enable = true;
 
     theme = {
-      name = "catppuccin-mocha-red-standard";
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ "red" ];
-        variant = "mocha";
+      name = "graphite-gtk-theme";
+      package = pkgs.graphite-gtk-theme.override {
+        tweaks = ["darker"];
+        themeVariants = ["red"];
       };
     };
 

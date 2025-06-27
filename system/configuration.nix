@@ -116,11 +116,12 @@ in
      hyprpicker
      grim          # screenshots
      slurp         # seleccionar área
-     wl-clipboard  # portapapeles
+     wl-clipboard  # portapapeles utilidad
      hyprlock
      hypridle
      wlogout
      grimblast
+     clipse # Portapaleles tui
 
      # Audio/Video
      pavucontrol
