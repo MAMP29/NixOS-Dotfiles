@@ -2,8 +2,8 @@
 
 {
   hardware.graphics.enable = true;
+  hardware.nvidia.modesetting.enable = true;
   services.xserver.videoDrivers = [
-   "modesetting"
    "nvidia"
   ];
   
