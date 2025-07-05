@@ -136,6 +136,7 @@ in
      file-roller
      gnome-calculator
      eog
+     obs-studio
 
      # Brillo
      brightnessctl
