@@ -11,6 +11,8 @@
     ./modules/home/develop/zsh.nix
     ./modules/home/desktop/gtk.nix
     ./modules/home/desktop/qt.nix
+    ./modules/home/develop/jetbrains.nix    
+    ./modules/home/develop/direnv.nix
   ];
 
 }
