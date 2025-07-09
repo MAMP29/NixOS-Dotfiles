@@ -1,14 +1,11 @@
 # Edit this configuration file to define what should be installed on
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
+{ config, pkgs, ... }:
 
-{ config, lib, pkgs, ... }:
 
-
-let
-  home-manager = builtins.fetchTarball https://github.com/nix-community/home-manager/archive/release-25.05.tar.gz;
-in
-{  imports =
+{  
+  imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./modules/drivers/nvidia.nix
@@ -17,13 +14,8 @@ in
       ./modules/core/mount.nix
       ./modules/core/greetd.nix
       ./modules/core/swayosd.nix
-      (import "${home-manager}/nixos")
     ];
 
-  home-manager.useUserPackages = true;
-  home-manager.useGlobalPkgs = true;
-  home-manager.backupFileExtension = "backup";
-  home-manager.users.mamp = import ./home.nix;
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
