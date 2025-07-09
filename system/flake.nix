@@ -17,7 +17,7 @@
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
           inherit system;
-          SpecialArgs = {
+          specialArgs = {
             inherit inputs;
             inherit username;
           };
