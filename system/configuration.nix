@@ -14,6 +14,7 @@
       ./modules/core/mount.nix
       ./modules/core/greetd.nix
       ./modules/core/swayosd.nix
+      ./modules/virtualization/docker.nix
     ];
 
 
@@ -79,7 +80,7 @@
  users.users.mamp = {
    shell = pkgs.zsh;
    isNormalUser = true;
-   extraGroups = [ "networkmanager" "wheel" ]; # Enable ‘sudo’ for the user.
+   extraGroups = [ "networkmanager" "wheel" "docker" ]; # Enable ‘sudo’ for the user.
    packages = with pkgs; [
      tree
      tidal-hifi
