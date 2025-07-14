@@ -13,7 +13,7 @@
       ./modules/core/bluetooth.nix
       ./modules/core/mount.nix
       ./modules/core/greetd.nix
-      ./modules/core/swayosd.nix
+      ./modules/core/power.nix
       ./modules/virtualization/docker.nix
     ];
 

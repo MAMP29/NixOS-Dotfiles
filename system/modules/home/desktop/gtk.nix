@@ -46,5 +46,5 @@
     gtk.enable = true;
   };
 
-  services.swayosd.enable = true;
+  # services.swayosd.enable = true;
 }

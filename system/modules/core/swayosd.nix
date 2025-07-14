@@ -1,6 +1,7 @@
 { config, lib, pkgs, ...}:
 
 {
+  # DESHABILITADO
   environment.systemPackages = [ pkgs.swayosd ];
   services.udev.packages = [ pkgs.swayosd ];
 
