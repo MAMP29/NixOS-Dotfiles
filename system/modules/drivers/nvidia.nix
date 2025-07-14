@@ -1,7 +1,13 @@
 { config, lib,  pkgs, ... }:
 
 {
-  hardware.graphics.enable = true;
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      cudatoolkit
+    ];
+  };
+
   hardware.nvidia.modesetting.enable = true;
   services.xserver.videoDrivers = [
    "nvidia"

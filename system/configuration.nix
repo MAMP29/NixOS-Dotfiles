@@ -55,7 +55,9 @@
   programs.hyprland.enable = true;  
 
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+      allowUnfree = true;
+  };
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
@@ -139,6 +141,8 @@
      git
 
      nemo-with-extensions
+
+     cudatoolkit
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
