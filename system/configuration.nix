@@ -15,6 +15,7 @@
       ./modules/core/greetd.nix
       ./modules/core/power.nix
       ./modules/virtualization/docker.nix
+      ./modules/virtualization/kube.nix
     ];
 
 

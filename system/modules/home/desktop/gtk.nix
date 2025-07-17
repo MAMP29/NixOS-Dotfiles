@@ -5,19 +5,10 @@
     catppuccin-gtk
     papirus-icon-theme
     adwaita-icon-theme
-    graphite-gtk-theme
   ];
 
   gtk = {
     enable = true;
-
-    theme = {
-      name = "graphite-gtk-theme";
-      package = pkgs.graphite-gtk-theme.override {
-        tweaks = ["darker"];
-        themeVariants = ["red"];
-      };
-    };
 
     cursorTheme = {
       name = "Adwaita";
