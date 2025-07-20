@@ -12,6 +12,7 @@
     ./modules/home/desktop/qt.nix
     ./modules/home/develop/jetbrains.nix    
     ./modules/home/develop/direnv.nix
+    ./modules/home/develop/minizinc.nix
     ./modules/home/utils/blender.nix
   ];
 
