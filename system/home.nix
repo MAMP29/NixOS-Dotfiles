@@ -13,6 +13,7 @@
     ./modules/home/develop/jetbrains.nix    
     ./modules/home/develop/direnv.nix
     ./modules/home/develop/minizinc.nix
+    ./modules/home/develop/android.nix
     ./modules/home/utils/blender.nix
   ];
 

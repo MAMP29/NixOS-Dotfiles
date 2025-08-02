@@ -83,7 +83,7 @@
  users.users.mamp = {
    shell = pkgs.zsh;
    isNormalUser = true;
-   extraGroups = [ "networkmanager" "wheel" "docker" ]; # Enable ‘sudo’ for the user.
+   extraGroups = [ "networkmanager" "wheel" "docker" "kvm" ];
    packages = with pkgs; [
      tree
      tidal-hifi
