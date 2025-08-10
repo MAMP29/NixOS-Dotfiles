@@ -21,7 +21,12 @@
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.efi.canTouchEfiVariables = true; 
+
+
+  boot.kernel.sysctl = {
+    "vm.swappiness" = 10;  # Menos uso de swap
+  };
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -142,8 +147,9 @@
      git
 
      nemo-with-extensions
-
-     cudatoolkit
+     
+     htop
+     #cudatoolkit
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -158,6 +164,9 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+
+  # Activa TRIM para el nvme
+  services.fstrim.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
