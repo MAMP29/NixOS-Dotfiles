@@ -3,9 +3,9 @@
 {
   hardware.graphics = {
     enable = true;
-   # extraPackages = with pkgs; [
-    #  cudatoolkit
-   # ];
+    extraPackages = with pkgs; [
+      cudatoolkit
+    ];
   };
 
   hardware.nvidia.modesetting.enable = true;
