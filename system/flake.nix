@@ -42,6 +42,9 @@
               home-manager.useUserPackages = true;
               home-manager.useGlobalPkgs = true;
               home-manager.backupFileExtension = "backup";
+              home-manager.extraSpecialArgs = {
+                inherit pkgs-unstable;
+              };
               home-manager.users.${username} = import ./home.nix;
             }
           ];

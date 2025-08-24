@@ -11,6 +11,7 @@
     ./modules/home/desktop/gtk.nix
     ./modules/home/desktop/qt.nix
     ./modules/home/desktop/xdg.nix
+    ./modules/home/desktop/utils-apps.nix
     ./modules/home/develop/jetbrains.nix    
     ./modules/home/develop/direnv.nix
     ./modules/home/develop/minizinc.nix
