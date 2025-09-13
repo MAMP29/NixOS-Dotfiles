@@ -16,6 +16,7 @@
       ./modules/core/power.nix
       ./modules/virtualization/docker.nix
       ./modules/virtualization/kube.nix
+      ./modules/virtualization/qemu.nix
     ];
 
 
@@ -88,7 +89,7 @@
  users.users.mamp = {
    shell = pkgs.zsh;
    isNormalUser = true;
-   extraGroups = [ "networkmanager" "wheel" "docker" "kvm" ];
+   extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" "kvm" ];
    packages = with pkgs; [
      tree
      tidal-hifi
