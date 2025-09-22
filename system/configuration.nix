@@ -89,7 +89,7 @@
  users.users.mamp = {
    shell = pkgs.zsh;
    isNormalUser = true;
-   extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" "kvm" ];
+   extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" "libvirt-qemu" "kvm" ];
    packages = with pkgs; [
      tree
      tidal-hifi
