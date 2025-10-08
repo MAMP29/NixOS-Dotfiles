@@ -154,6 +154,14 @@
      bc
      tldr
      nmap
+
+    (lutris.override {
+      extraPkgs = pkgs: [
+        winetricks
+      ];
+    })
+     wine-staging
+     mangohud
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
