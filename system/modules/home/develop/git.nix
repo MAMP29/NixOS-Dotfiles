@@ -14,6 +14,7 @@ let
     aliases = {
       st = "status";
       cm = "commit --message";
+      co = "checkout";
     };
   }; 
 }

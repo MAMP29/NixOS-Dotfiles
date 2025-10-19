@@ -4,6 +4,17 @@
   # Directorios XDG en inglés
   xdg.userDirs = {
     enable = true;
+    mime.enable = true;
+    mimeApps = {
+      enable = true;
+    };
+
+    portal = {
+      enable = true;
+      extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+      configPackages = [ pkgs.niri ];
+    };
+
     createDirectories = true; # Crea los directorios si no existen
     desktop = "${config.home.homeDirectory}/Desktop";
     documents = "${config.home.homeDirectory}/Documents";

@@ -2,7 +2,6 @@
 
 {
   home.packages = with pkgs; [
-    catppuccin-gtk
     papirus-icon-theme
     adwaita-icon-theme
   ];

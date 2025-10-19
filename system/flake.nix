@@ -47,7 +47,7 @@
               home-manager.extraSpecialArgs = {
                 inherit pkgs-unstable;
               };
-              home-manager.users.${username} = import ./home.nix; # cambiar host
+              home-manager.users.${username} = import ./host/${host}/home.nix; # cambiar host
             }
           ];
         };
