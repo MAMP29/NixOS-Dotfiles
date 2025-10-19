@@ -1,7 +1,7 @@
-{ config, pkgs, ... }:
+{ config, username, pkgs, ... }:
 
 {
-   users.users.mamp = {
+   users.users.${username} = {
    isNormalUser = true;
    extraGroups = [
     "networkmanager"

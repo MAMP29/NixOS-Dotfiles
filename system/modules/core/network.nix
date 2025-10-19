@@ -1,8 +1,8 @@
-{ config, pkgs, ... }:
+{ config, host, pkgs, ... }:
 
 {
   networking = {
-    hostName = "nixos-nitro"; # Define your hostname.
+    hostName = "${host}"; # Define your hostname.
     networkmanager.enable = true;  # Easiest to use and most distros use this by default.
    
     

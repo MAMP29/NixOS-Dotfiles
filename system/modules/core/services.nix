@@ -6,6 +6,7 @@
     openssh.enable = true;
     fstrim.enable = true; # Activa TRIM para el nvme
     gvfs.enable = true; # Para nemo, montaje USB y mas
+    thermald.enable = true;
     udisks2.enable = true;
     blueman.enable = true; # Bluetooth Support
 

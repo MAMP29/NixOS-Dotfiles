@@ -26,9 +26,10 @@
       system = "x86_64-linux";
       pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
       username = "mamp";
+      host = "nixide";
     in { 
       nixosConfigurations = {
-        nixos = nixpkgs.lib.nixosSystem {
+        nixos-nitro = nixpkgs.lib.nixosSystem {
           inherit system;
           specialArgs = {
             inherit inputs;
@@ -36,7 +37,7 @@
             inherit pkgs-unstable;
           };
           modules = [
-            ./configuration.nix
+            ./configuration.nix # cambiar host
 
             home-manager.nixosModules.home-manager
             {
@@ -46,7 +47,7 @@
               home-manager.extraSpecialArgs = {
                 inherit pkgs-unstable;
               };
-              home-manager.users.${username} = import ./home.nix;
+              home-manager.users.${username} = import ./home.nix; # cambiar host
             }
           ];
         };
