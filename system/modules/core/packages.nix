@@ -48,8 +48,8 @@
     eog
     obs-studio
 
-    # Brillo
-    brightnessctl
+    # Brillo - Ahora en el default del host
+    # brightnessctl
 
     # Desarrollo
     vscode
