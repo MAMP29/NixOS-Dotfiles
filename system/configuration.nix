@@ -20,149 +20,9 @@
     ];
 
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true; 
-
-
-  boot.kernel.sysctl = {
-    "vm.swappiness" = 10;  # Menos uso de swap
-  };
-
-  # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelParams = ["acpi_backlight=native"];
-
-  networking.hostName = "nixos"; # Define your hostname.
-  # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
-
-  # Experimental features
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
-  # Set your time zone.
-  time.timeZone = "America/Bogota";
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "es_CO.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
-  # };
-
-  # Enable the X11 windowing system.
-  # services.xserver.enable = true;
-
-  programs.hyprland.enable = true;  
-
-
-  nixpkgs.config = {
-      allowUnfree = true;
-  };
-  # Configure keymap in X11
-  # services.xserver.xkb.layout = "us";
-  # services.xserver.xkb.options = "eurosign:e,caps:escape";
-
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
-
-  # Enable sound.
-  # services.pulseaudio.enable = true;
-  # OR
-   services.pipewire = {
-     enable = true;
-     pulse.enable = true;
-     alsa.enable = true;
-   };
-
-  
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
- users.users.mamp = {
-   shell = pkgs.zsh;
-   isNormalUser = true;
-   extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" "libvirt-qemu" "kvm" ];
-   packages = with pkgs; [
-     tree
-     tidal-hifi
-   ];
- };
-
-  programs.firefox.enable = true;
-  programs.zsh.enable = true;
-  
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
-   environment.systemPackages = with pkgs; [
-     helix # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-     wget
-     kitty
-     brave
-     pamixer
-
-     # Cosas de hyprland
-     rofi
-     waybar
-     swaynotificationcenter
-     libnotify
-     swww
-     waypaper
-     hyprpicker
-     grim          # screenshots
-     slurp         # seleccionar área
-     wl-clipboard  # portapapeles utilidad
-     hyprlock
-     hypridle
-     wlogout
-     grimblast
-     clipse # Portapaleles tui
-
-     # Audio/Video
-     pavucontrol
-     mpv
-     playerctl
-
-     # Redes
-     networkmanagerapplet
-     blueman
-
-     # Utilidades     
-     file-roller
-     gnome-calculator
-     eog
-     obs-studio
-
-     # Brillo
-     brightnessctl
-
-     # Desarrollo
-     vscode
-     git
-
-     nemo-with-extensions
-     
-     htop
-     cudatoolkit
-     bc
-     tldr
-     nmap
-
-    (lutris.override {
-      extraPkgs = pkgs: [
-        winetricks
-      ];
-    })
-     wine-staging
-     mangohud
-   ];
+ 
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -173,12 +33,6 @@
   # };
 
   # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
-
-  # Activa TRIM para el nvme
-  services.fstrim.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

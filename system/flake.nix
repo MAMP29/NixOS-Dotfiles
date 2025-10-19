@@ -1,6 +1,7 @@
 {
   description = "Flake de configuración de sistema NixOS";
 
+  # Ya lo puse en un modulo, quitar
   nixConfig = {
     extra-substituters = [
       "https://nix-community.cachix.org"

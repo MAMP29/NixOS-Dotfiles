@@ -6,6 +6,8 @@
   };
 
   environment.systemPackages = with pkgs; [
+    minikube
+    kubectl
     docker-compose
     docker-buildx
   ];
