@@ -36,6 +36,11 @@
     upscaler
     switcheroo
     handbrake
+    file-roller
+    eog
+    gnome-disk-utility
+    nemo-with-extensions
+    pavucontrol!
 
     # Herramientas de Desarrollo y CLI de Usuario
     ripgrep
