@@ -1,6 +1,6 @@
 { lib, pkgs, config, ... }:
 with lib; let
-  cfg = config.drivers.intel; # <-- Aquí está la clave
+  cfg = config.drivers.intel;
 in
 {
   # 1. Definimos la opción para que el usuario la pueda activar o desactivar
