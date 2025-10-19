@@ -10,58 +10,43 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    # Sistema
     helix # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
-    kitty
-    brave
+    git
+    cudatoolkit
+    htop
+    
+     # Utilidades de Bajo Nivel
     pamixer
-
-    # Cosas de hyprland
-    rofi
-    waybar
-    swaynotificationcenter
-    libnotify
-    swww
-    waypaper
-    hyprpicker
-    grim          # screenshots
-    slurp         # seleccionar área
-    wl-clipboard  # portapapeles utilidad
-    hyprlock
-    hypridle
-    wlogout
-    grimblast
-    clipse # Portapaleles tui
-
-    # Audio/Video
-    pavucontrol
-    mpv
+    wl-clipboard  # portapapeles
     playerctl
 
-    # Redes
-    networkmanagerapplet
-    blueman
+    # Multimedia
+    ffmpeg
+    mpv
+    pavucontrol
 
-    # Utilidades     
-    file-roller
-    gnome-calculator
-    eog
-    obs-studio
-
-    # Brillo - Ahora en el default del host
-    # brightnessctl
-
-    # Desarrollo
-    vscode
-    git
-
-    nemo-with-extensions
-    
-    htop
-    cudatoolkit
+    # Utilidades
+    nmap
     bc
     tldr
-    nmap
+
+    # Utilidades GUI
+    file-roller
+    eog
+    gnome-disk-utility
+
+    # Cosas de hyprland
+    hyprlock # Necesita interactuar con systemd/logind para bloquear la sesión correctamente.
+    hypridle # Demonio de inactividad que se ejecuta a nivel de sistema/sesión.
+
+    # Navegador de archivos
+    nemo-with-extensions
+   ];
+}
+
+
 
     #(lutris.override {
     #  extraPkgs = pkgs: [
@@ -70,5 +55,3 @@
     #})
     # wine-staging
     # mangohud
-   ];
-}

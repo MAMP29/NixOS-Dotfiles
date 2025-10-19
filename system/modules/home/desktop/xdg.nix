@@ -11,8 +11,8 @@
 
     portal = {
       enable = true;
-      extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-      configPackages = [ pkgs.niri ];
+      extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+      configPackages = [ pkgs.hyprland ];
     };
 
     createDirectories = true; # Crea los directorios si no existen

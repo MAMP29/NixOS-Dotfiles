@@ -2,13 +2,42 @@
 
 {
   home.packages = with pkgs; [
+
+    # Editor
+    vscode
+
+    # Terminal
+    kitty
+
+    # Navegador
+    brave
+    
+    # Componentes de la UI de Hyprland
+    rofi
+    waybar
+    swaynotificationcenter
+    libnotify
+    swww
+    waypaper
+    hyprpicker
+    grim          # screenshots
+    slurp         # seleccionar área
+    wlogout
+    grimblast
+    clipse # Portapaleles tui
+
+    # Aplicaciones GUI
+    networkmanagerapplet
+    blueman
+    gnome-calculator
+    obs-studio
     libreoffice-fresh
-    gnome-disk-utility
     gnome-clocks
     upscaler
     switcheroo
     handbrake
-    ffmpeg
+
+    # Herramientas de Desarrollo y CLI de Usuario
     ripgrep
     bat
   ] ++ (with pkgs-unstable; [
@@ -16,7 +45,6 @@
     (btop.override {
       cudaSupport = true;
     })
-    gnome-frog
     nvme-cli
     eza
   ]);
