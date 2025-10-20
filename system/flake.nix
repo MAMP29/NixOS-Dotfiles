@@ -22,22 +22,12 @@
           specialArgs = {
             inherit inputs;
             inherit username;
+            inherit host;
             inherit pkgs-unstable;
           };
           modules = [
             ./host/${host}/default.nix # cambiar host
-            stylix.nixosModules.stylix
-            
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useUserPackages = true;
-              home-manager.useGlobalPkgs = true;
-              home-manager.backupFileExtension = "backup";
-              home-manager.extraSpecialArgs = {
-                inherit pkgs-unstable;
-              };
-              home-manager.users.${username} = import ./host/${host}/home.nix; # cambiar host
-            }
+
           ];
         };
       };

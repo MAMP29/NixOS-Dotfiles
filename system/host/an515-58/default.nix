@@ -1,10 +1,11 @@
-{ config, pkgs, username, ... }: 
+{ config, inputs, pkgs, username, host, pkgs-unstable, ... }: 
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../modules/core
+      inputs.stylix.nixosModules.stylix
     ];
 
   services = {
