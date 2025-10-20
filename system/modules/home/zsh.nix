@@ -5,6 +5,7 @@
   enable = true;
   syntaxHighlighting.enable = true;
   autosuggestion.enable = true;
+  autosuggestion.highlight = "fg=#a0b0c0,italic";
   shellAliases = {
     btw = "echo i use nixos btw";
   };
