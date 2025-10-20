@@ -1,6 +1,6 @@
 { config, host, pkgs, ... }:
 let
-  inherit (import ../../../host/an515-58/variables.nix) gitUserName gitEmail;
+  inherit (import ../../../host/${host}/variables.nix) gitUserName gitEmail;
 {
   programs.git = {
     enable = true;
