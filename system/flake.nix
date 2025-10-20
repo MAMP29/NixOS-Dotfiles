@@ -25,7 +25,7 @@
             inherit pkgs-unstable;
           };
           modules = [
-            ./host/${host}/configuration.nix # cambiar host
+            ./host/${host}/default.nix # cambiar host
             stylix.nixosModules.stylix
             
             home-manager.nixosModules.home-manager

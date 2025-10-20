@@ -40,11 +40,13 @@
     eog
     gnome-disk-utility
     nemo-with-extensions
-    pavucontrol!
+    pavucontrol
+    tidal-hifi
 
     # Herramientas de Desarrollo y CLI de Usuario
     ripgrep
     bat
+    tree
   ] ++ (with pkgs-unstable; [
     mission-center
     (btop.override {
