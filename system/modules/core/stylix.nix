@@ -15,14 +15,9 @@ in
       package = pkgs.adwaita-icon-theme;
     };
 
-    icons = {
-      package = pkgs.papirus-icon-theme;
-      dark = "Papirus-Dark";
-      light = "Papirus-Dark";
-    };
-    
     homeManagerIntegration = {
       autoImport = true;
+      followSystem = true;
     };
     targets = {
       gtk.enable = true;
