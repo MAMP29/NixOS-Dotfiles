@@ -16,6 +16,5 @@
     ./stylix.nix
     ./system.nix
     ./user.nix
-    inputs.stylix.nixosModules.stylix
   ];
 }

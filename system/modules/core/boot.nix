@@ -8,5 +8,5 @@
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
     kernel.sysctl = { "vm.swappiness" = 10; }; # Menos uso de swap
-  }
+  };
 }

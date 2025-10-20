@@ -1,8 +1,9 @@
+
 { config, pkgs, ... }:
 
 {
   # Directorios XDG en inglés
-  xdg.userDirs = {
+  xdg = {
     enable = true;
     mime.enable = true;
     mimeApps = {
@@ -15,15 +16,18 @@
       configPackages = [ pkgs.hyprland ];
     };
 
-    createDirectories = true; # Crea los directorios si no existen
-    desktop = "${config.home.homeDirectory}/Desktop";
-    documents = "${config.home.homeDirectory}/Documents";
-    download = "${config.home.homeDirectory}/Downloads";
-    music = "${config.home.homeDirectory}/Music";
-    pictures = "${config.home.homeDirectory}/Pictures";
-    videos = "${config.home.homeDirectory}/Videos";
-    publicShare = "${config.home.homeDirectory}/Public";
-    templates = "${config.home.homeDirectory}/Templates";
+    userDirs = {
+      enable = true;
+      createDirectories = true; # Crea los directorios si no existen
+      desktop = "${config.home.homeDirectory}/Desktop";
+      documents = "${config.home.homeDirectory}/Documents";
+      download = "${config.home.homeDirectory}/Downloads";
+      music = "${config.home.homeDirectory}/Music";
+      pictures = "${config.home.homeDirectory}/Pictures";
+      videos = "${config.home.homeDirectory}/Videos";
+      publicShare = "${config.home.homeDirectory}/Public";
+      templates = "${config.home.homeDirectory}/Templates";
+    };
   };
 
   # Persistencia para estos directorios

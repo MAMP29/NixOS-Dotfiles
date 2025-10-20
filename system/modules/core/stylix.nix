@@ -17,10 +17,15 @@ in
 
     icons = {
       package = pkgs.papirus-icon-theme;
-      theme = "Papirus-Dark"; # 'theme' es la opción correcta, no 'dark'
+      dark = "Papirus-Dark";
+      light = "Papirus-Dark";
     };
     
-    homeManagerIntegration.autoImport = true;
-    targets.gtk.enable = true;
+    homeManagerIntegration = {
+      autoImport = true;
+    };
+    targets = {
+      gtk.enable = true;
+    };
   };
 }
