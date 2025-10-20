@@ -3,7 +3,7 @@
     ./git.nix
     ./gtk.nix
     ./jetbrains.nix
-    ./qt.nix
+    ./stylix.nix
     ./utils-apps.nix
     ./xdg.nix
     ./zsh.nix

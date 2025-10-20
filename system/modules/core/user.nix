@@ -12,7 +12,6 @@
     "kvm"
     ]; 
    shell = pkgs.zsh;
-   packages = with pkgs; [
-   ];
+   packages = [ ];
  };
 }
