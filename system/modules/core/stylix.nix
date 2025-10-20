@@ -19,6 +19,7 @@ in
       autoImport = true;
       followSystem = true;
     };
+    
     targets = {
       gtk.enable = true;
     };
