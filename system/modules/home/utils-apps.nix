@@ -42,6 +42,7 @@
     nemo-with-extensions
     pavucontrol
     tidal-hifi
+    evince
 
     # Herramientas de Desarrollo y CLI de Usuario
     ripgrep
