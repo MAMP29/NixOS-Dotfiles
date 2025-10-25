@@ -41,7 +41,8 @@
     gnome-disk-utility
     nemo-with-extensions
     pavucontrol
-    tidal-hifi
+    #tidal-hifi
+    ytmdesktop
     evince
 
     # Herramientas de Desarrollo y CLI de Usuario
