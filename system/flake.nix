@@ -12,7 +12,10 @@
 
   outputs = { nixpkgs, nixpkgs-unstable, home-manager, stylix, ... } @ inputs: let
       system = "x86_64-linux";
-      pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
+      pkgs-unstable = import nixpkgs-unstable {
+        inherit system;
+        config.allowUnfree = true;
+      };
       username = "mamp";
       host = "an515-58";
     in { 
