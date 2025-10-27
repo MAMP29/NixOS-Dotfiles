@@ -42,7 +42,6 @@
     nemo-with-extensions
     pavucontrol
     #tidal-hifi
-    ytmdesktop
     kdePackages.kdenlive
     evince
 
@@ -57,5 +56,6 @@
     })
     nvme-cli
     eza
+    ytmdesktop
   ]);
 }
