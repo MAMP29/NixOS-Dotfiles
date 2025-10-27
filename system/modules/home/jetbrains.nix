@@ -5,7 +5,7 @@
     android-studio
     jetbrains.idea-community-src
     jetbrains.pycharm-community-bin
-  ]++ (with pkgs-unstable; [
+  ] ++ (with pkgs-unstable; [
     jetbrains.pycharm-professional
-  ]);;
+  ]);
 }
