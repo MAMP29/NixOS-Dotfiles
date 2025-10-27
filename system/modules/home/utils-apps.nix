@@ -43,6 +43,7 @@
     pavucontrol
     #tidal-hifi
     ytmdesktop
+    kdePackages.kdenlive
     evince
 
     # Herramientas de Desarrollo y CLI de Usuario
