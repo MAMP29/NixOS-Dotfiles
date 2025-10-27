@@ -56,6 +56,5 @@
     })
     nvme-cli
     eza
-    ytmdesktop
   ]);
 }
