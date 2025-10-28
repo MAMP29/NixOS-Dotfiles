@@ -1,10 +1,16 @@
 { config, pkgs, pkgs-unstable, ... }:
 
 {
-  home.packages = with pkgs; [
+  programs = {
+    btop = {
+      enable = true;
+      package = pkgs.btop.override {
+      cudaSupport = true;
+    };
+    bat.enable = true;
+  };
 
-    # Editor
-    vscode
+  home.packages = with pkgs; [
 
     # Terminal
     kitty
@@ -47,13 +53,9 @@
 
     # Herramientas de Desarrollo y CLI de Usuario
     ripgrep
-    bat
     tree
   ] ++ (with pkgs-unstable; [
     mission-center
-    (btop.override {
-      cudaSupport = true;
-    })
     nvme-cli
     eza
   ]);
