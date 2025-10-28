@@ -18,7 +18,7 @@
           "workbench.iconTheme" = "vscode-icons";
           "extensions.autoCheckUpdates" = false;
           "extensions.autoUpdate" = false;
-          "terminal.integrated.fontFamily": "FiraCode Nerd Font";
+          "terminal.integrated.fontFamily" = "FiraCode Nerd Font";
         };
       };
     };
