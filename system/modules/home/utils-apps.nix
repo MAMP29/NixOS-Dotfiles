@@ -5,7 +5,8 @@
     btop = {
       enable = true;
       package = pkgs.btop.override {
-      cudaSupport = true;
+        cudaSupport = true;
+      };
     };
     bat.enable = true;
   };
