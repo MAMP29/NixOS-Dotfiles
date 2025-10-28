@@ -5,7 +5,7 @@
     enable = true;
     profiles = {
       default = {
-        extensions = with.vscode-extensions; [
+        extensions = with pkgs.vscode-extensions; [
           vscode-icons-team.vscode-icons
           ritwickdey.liveserver
           jnoortheen.nix-ide
