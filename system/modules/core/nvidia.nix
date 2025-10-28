@@ -6,6 +6,8 @@
     enable32Bit = true;
     extraPackages = with pkgs; [
       cudatoolkit
+      intel-media-driver
+      intel-compute-runtime
     ];
   };
 
@@ -18,6 +20,7 @@
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = true;
+    powerManagement.finegrained = true;
     nvidiaSettings = true;
     open = false;  # see the note above
     
