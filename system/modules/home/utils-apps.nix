@@ -9,7 +9,10 @@
       };
     };
     bat.enable = true;
+    kwallet.enable = false;
   };
+
+  services.kwaller.enable =  false;
 
   home.packages = with pkgs; [
 
