@@ -9,10 +9,7 @@
       };
     };
     bat.enable = true;
-    kwallet.enable = false;
   };
-
-  services.kwaller.enable =  false;
 
   home.packages = with pkgs; [
 
@@ -52,7 +49,6 @@
     nemo-with-extensions
     pavucontrol
     #tidal-hifi
-    kdePackages.kdenlive
     evince
 
     # Herramientas de Desarrollo y CLI de Usuario
