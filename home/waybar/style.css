@@ -84,12 +84,12 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: #b16a6a; /* PÚRPURA para el workspace activo */
+    color: #91d183; /* PÚRPURA para el workspace activo */
     font-size: 18px; /* Lo hacemos un poco más grande para destacarlo */
 }
 
 #workspaces button.empty {
-    color: #574343; /* PÚRPURA para el workspace activo */
+    color: #475743; /* PÚRPURA para el workspace activo */
     font-size: 18px; /* Lo hacemos un poco más grande para destacarlo */
 }
 
@@ -120,7 +120,7 @@ window#waybar {
 
 /* Mpris (música) */
 #mpris {
-    color: #d48888;
+    color: #91d183;
 }
 
 /* Efecto hover general para los demás módulos */

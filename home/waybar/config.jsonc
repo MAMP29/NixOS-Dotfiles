@@ -180,6 +180,7 @@
         "format-ethernet": "󰈀",
         "format-disconnected": "󰖪",
         "tooltip-format-disconnected": "Desconectado",
+        "tooltip-format-wifi": "Conectado a: {essid}",
         "on-click": "nm-connection-editor"
     },
 
