@@ -32,7 +32,7 @@
       };
       
       "window" = {
-        transparency = mkLiteral "real";
+        transparency = "real";
         location = mkLiteral "center";
         anchor = mkLiteral "center";
         fullscreen = false;
@@ -44,7 +44,7 @@
         margin = mkLiteral "0px";
         padding = mkLiteral "0px";
         border-radius = mkLiteral "16px";
-        cursor = mkLiteral "default";
+        cursor = "default";
         background-color = mkLiteral "transparent";
       };
 
@@ -76,7 +76,7 @@
         border-radius = mkLiteral "100%";
         background-color = mkLiteral "@selected";
         text-color = mkLiteral "@text-primary";
-        str = mkLiteral " ";
+        str = " ";
       };
 
       "entry" = {
@@ -105,7 +105,7 @@
         border-radius = mkLiteral "100%";
         background-color = mkLiteral "@background-alt";
         text-color = mkLiteral "@text-secondary";
-        cursor = mkLiteral "pointer";
+        cursor = "pointer";
       };
 
       "button selected" = {
@@ -131,7 +131,7 @@
         border-radius = mkLiteral "16px";
         border-color = mkLiteral "@border-color";
         background-color = mkLiteral "@background";
-        cursor = mkLiteral "default";
+        cursor = "default";
       };
 
       "element" = {
