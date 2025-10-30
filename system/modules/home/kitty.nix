@@ -4,13 +4,8 @@
   programs.kitty = {
     enable = true;
     package = pkgs.kitty;
-
-    font = {
-      name = "JetBrainsMono Nerd Font";
-      size = 12;
-    };
-
     settings = {
+      font_size = 12;
       bold_font = "none";
       italic_font = "auto";
       bold_italic_font = "auto";
