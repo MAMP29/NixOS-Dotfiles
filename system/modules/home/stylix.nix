@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+  stylix.opacity.terminal = 0.9;
   stylix.targets = {
     qt.enable = true;
     vscode.enable = true;
