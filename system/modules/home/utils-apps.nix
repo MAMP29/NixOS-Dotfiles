@@ -18,7 +18,6 @@
     
     # Componentes de la UI de Hyprland
     waybar
-    swaynotificationcenter
     libnotify
     swww
     waypaper

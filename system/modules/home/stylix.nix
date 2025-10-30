@@ -7,5 +7,6 @@
     vscode.enable = true;
     kitty.enable = true;
     rofi.enable = false;
+    swaync.enable = false;
   };
 }

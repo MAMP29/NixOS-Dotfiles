@@ -6,6 +6,7 @@
     ./kitty.nix
     ./rofi.nix
     ./stylix.nix
+    ./swaync.nix
     ./utils-apps.nix
     ./vscode.nix
     ./wlogout/wlogout.nix
