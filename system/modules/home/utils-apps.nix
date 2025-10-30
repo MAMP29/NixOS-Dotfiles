@@ -13,14 +13,10 @@
 
   home.packages = with pkgs; [
 
-    # Terminal
-    kitty
-
     # Navegador
     brave
     
     # Componentes de la UI de Hyprland
-    rofi
     waybar
     swaynotificationcenter
     libnotify
