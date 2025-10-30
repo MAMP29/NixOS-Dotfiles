@@ -29,7 +29,6 @@
     hyprpicker
     grim          # screenshots
     slurp         # seleccionar área
-    wlogout
     grimblast
     clipse # Portapaleles tui
 

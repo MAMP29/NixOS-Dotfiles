@@ -7,6 +7,7 @@
     ./stylix.nix
     ./utils-apps.nix
     ./vscode.nix
+    ./wlogout/wlogout.nix
     ./xdg.nix
     ./zsh.nix
   ];
