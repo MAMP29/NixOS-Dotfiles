@@ -17,5 +17,8 @@
         })
       '';
     };
+    pam = {
+      services.hyprlock = {};
+    };
   };
 }

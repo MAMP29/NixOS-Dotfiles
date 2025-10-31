@@ -32,7 +32,6 @@
     tldr
 
     # Cosas de hyprland
-    hyprlock # Necesita interactuar con systemd/logind para bloquear la sesión correctamente.
     hypridle # Demonio de inactividad que se ejecuta a nivel de sistema/sesión.
     
    ];
