@@ -9,5 +9,6 @@
     rofi.enable = false;
     swaync.enable = false;
     waybar.enable = false;
+    hyprlock.enable = false;
   };
 }

@@ -29,12 +29,6 @@
           keyColor = "31";
         }
         {
-          type = "command";
-          key = " ├  NixOS ";
-          keyColor = "31";
-          text = "nixos-version | head -n 1"; 
-        }
-        {
           type = "kernel";
           key = " ├  ";
           keyColor = "31";
