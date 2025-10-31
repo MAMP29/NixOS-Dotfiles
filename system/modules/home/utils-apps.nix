@@ -17,7 +17,6 @@
     brave
     
     # Componentes de la UI de Hyprland
-    waybar
     libnotify
     swww
     waypaper

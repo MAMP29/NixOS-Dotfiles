@@ -8,5 +8,6 @@
     kitty.enable = true;
     rofi.enable = false;
     swaync.enable = false;
+    waybar.enable = false;
   };
 }
