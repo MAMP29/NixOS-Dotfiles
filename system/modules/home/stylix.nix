@@ -10,5 +10,6 @@
     swaync.enable = false;
     waybar.enable = false;
     hyprlock.enable = false;
+    niri.enable = false;
   };
 }

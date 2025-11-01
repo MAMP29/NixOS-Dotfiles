@@ -6,6 +6,7 @@
       ./hardware-configuration.nix
       ../../modules/core
       inputs.stylix.nixosModules.stylix
+      inputs.niri-flake.nixosModules.niri
     ];
 
   services = {

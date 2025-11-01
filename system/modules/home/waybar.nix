@@ -14,7 +14,7 @@
         # --- Distribución de Módulos ---
         "modules-left" = [
           "custom/icon"
-          "hyprland/workspaces#roman"
+          "niri/workspaces#roman"
           "network"
           "battery"
           "custom/swaync"
@@ -36,7 +36,25 @@
           "separate-outputs" = true;
         };
 
-        "hyprland/workspaces#roman" = {
+        "niri/workspaces#roman" = {
+          format = "{icon}";
+          "all-outputs"= true;
+          "on-click" = "activate";
+          "format-icons" = {
+            "1" = "I";
+            "2" = "II";
+            "3" = "III";
+            "4" = "IV";
+            "5" = "V";
+            "6" = "VI";
+            "7" = "VII";
+            "8" = "VIII";
+            "9" = "IX";
+            "10" = "X";
+          };
+        };
+
+ /*       "hyprland/workspaces#roman" = {
           "active-only" = false;
           "all-outputs" = true;
           format = "{icon}";
@@ -59,7 +77,7 @@
             "9" = "IX";
             "10" = "X";
           };
-        };
+        };*/
 
         "custom/separator" = {
           format = "|";
@@ -168,7 +186,7 @@
         "custom/swaync" = {
           tooltip = true;
           "tooltip-format" = "Left Click: Launch Notification Center\nRight Click: Do not Disturb";
-          format = "{icon} {}";
+          format = "{icon} {text}"; # Indexación automatica no soportada en nuevas versiones, agregado para cuando actualice paquetes
           "format-icons" = {
             notification = "<span foreground='red'><sup></sup></span>";
             none = "";

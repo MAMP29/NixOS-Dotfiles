@@ -16,9 +16,10 @@
           { return polkit.Result.YES; }
         })
       '';
-    };
+    };  
     pam = {
       services.hyprlock = {};
     };
   };
+  systemd.user.services.niri-flake-polkit.enable = false; # Suprimo el polkit KDE que el flake de niri use el de gnome
 }

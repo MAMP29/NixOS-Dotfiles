@@ -8,6 +8,7 @@
     ./greetd.nix
     ./hardware.nix
     ./network.nix
+    ./niri.nix
     ./nvidia.nix
     ./packages.nix
     ./qemu.nix
@@ -16,5 +17,6 @@
     ./stylix.nix
     ./system.nix
     ./user.nix
+    ./xdg-portals.nix
   ];
 }

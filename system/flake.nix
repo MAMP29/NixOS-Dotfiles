@@ -7,10 +7,14 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    niri-flake = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     stylix.url = "github:danth/stylix/release-25.05";
   };
 
-  outputs = { nixpkgs, nixpkgs-unstable, home-manager, stylix, ... } @ inputs: let
+  outputs = { nixpkgs, nixpkgs-unstable, home-manager, niri-flake, stylix, ... } @ inputs: let
       system = "x86_64-linux";
       pkgs-unstable = import nixpkgs-unstable {
         inherit system;

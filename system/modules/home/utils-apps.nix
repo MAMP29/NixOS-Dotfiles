@@ -20,10 +20,6 @@
     libnotify
     swww
     waypaper
-    hyprpicker
-    grim          # screenshots
-    slurp         # seleccionar área
-    grimblast
     clipse # Portapaleles tui
 
     # Aplicaciones GUI
