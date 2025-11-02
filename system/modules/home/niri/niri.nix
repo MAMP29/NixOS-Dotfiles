@@ -272,6 +272,7 @@
                 touchpad {
                     tap
                     drag true
+                    natural-scroll
                     scroll-method "two-finger"        
                 }
                 mouse {
@@ -351,7 +352,8 @@
             // Note that running niri as a session supports xdg-desktop-autostart,
             // Waybar, swayidle estan en el home con systemd-target, por lo que no seran necesarios
             spawn-at-startup "swww-daemon"
-            spawn-at-startup "clipse -listen"
+            spawn-sh-at-startup "clipse -listen"
+            spawn-sh-at-startup "systemctl --user start hypridle.service"
             spawn-at-startup "exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
             spawn-at-startup "swaync"
             spawn-at-startup "waybar"

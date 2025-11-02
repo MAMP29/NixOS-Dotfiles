@@ -2,13 +2,12 @@
 
 {
   services.hypridle = {
-    enable = false;
+    enable = true;
     settings = {
       # --- Bloque General ---
       general = {
-        lock_cmd = ''${pkgs.procps}/bin/pidof hyprlock || ${pkgs.hyprlock}/bin/hyprlock'';
-        before_sleep_cmd = "${pkgs.systemd}/bin/loginctl lock-session";
-        after_sleep_cmd = "${pkgs.hyprland}/bin/hyprctl dispatch dpms on";
+        lock_cmd = "pidof hyprlock || niri msg action do-screen-transition && hyprlock";
+        before_sleep_cmd = "loginctl lock-session";
       };
 
       # --- Bloque de Listeners ---
@@ -16,24 +15,24 @@
         # Listener 1: Atenuar el brillo después de 2 minutos.
         {
           timeout = 120;
-          on-timeout = "${pkgs.brightnessctl}/bin/brightnessctl -s set 5";
-          on-resume = "${pkgs.brightnessctl}/bin/brightnessctl -r";
+          on-timeout = "brightnessctl -s set 5";
+          on-resume = "brightnessctl -r";
         }
         # Listener 2: Bloquear la pantalla después de 3 minutos.
         {
           timeout = 180;
-          on-timeout = "${pkgs.systemd}/bin/loginctl lock-session";
+          on-timeout = "loginctl lock-session";
         }
         # Listener 3: Apagar las pantallas después de 5 minutos.
         {
           timeout = 300;
-          on-timeout = "${pkgs.hyprland}/bin/hyprctl dispatch dpms off";
-          on-resume = "${pkgs.hyprland}/bin/hyprctl dispatch dpms on";
+          on-timeout = "niri msg action set-dpms-off";
+          on-resume = "niri msg action set-dpms-on";
         }
         # Listener 4: Suspender el sistema después de 10 minutos.
         {
           timeout = 600;
-          on-timeout = "${pkgs.systemd}/bin/systemctl suspend";
+          on-timeout = "systemctl suspend";
         }
       ];
     };

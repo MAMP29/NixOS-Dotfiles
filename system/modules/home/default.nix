@@ -3,13 +3,13 @@
     ./fastfetch/fastfetch.nix
     ./git.nix
     ./gtk.nix
+    ./hypr/hypridle.nix
     ./hypr/hyprlock.nix
     ./jetbrains.nix
     ./kitty.nix
     ./niri/niri.nix
     ./rofi.nix
     ./stylix.nix
-    ./swayidle.nix
     ./swaync.nix
     ./utils-apps.nix
     ./vscode.nix

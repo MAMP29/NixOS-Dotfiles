@@ -44,7 +44,7 @@ in {
   home.packages = [ lock-script ];
 
   services.swayidle = {
-    enable = true;
+    enable = false;
     # Esto asegura que swayidle se inicie junto con la sesión de Niri.
     systemdTarget = "niri.service";
 
