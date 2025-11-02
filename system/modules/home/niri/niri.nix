@@ -354,6 +354,7 @@
             spawn-at-startup "clipse -listen"
             spawn-at-startup "exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
             spawn-at-startup "swaync"
+            spawn-at-startup "waybar"
 
             hotkey-overlay {
                 skip-at-startup
@@ -442,13 +443,13 @@
                 Mod+Escape { spawn "wlogout"; }
 
 
-                XF86AudioRaiseVolume allow-when-locked=true { spawn "manage-volume --inc"; }
-                XF86AudioLowerVolume allow-when-locked=true { spawn "manage-volume --dec"; }
-                XF86AudioMute        allow-when-locked=true { spawn "manage-volume --toggle"; }
-                XF86AudioMicMute     allow-when-locked=true { spawn "manage-volume --toggle-mic"; }
+                XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "manage-volume --inc"; }
+                XF86AudioLowerVolume allow-when-locked=true { spawn-sh "manage-volume --dec"; }
+                XF86AudioMute        allow-when-locked=true { spawn-sh "manage-volume --toggle"; }
+                XF86AudioMicMute     allow-when-locked=true { spawn-sh "manage-volume --toggle-mic"; }
 
-                XF86MonBrightnessUp allow-when-locked=true { spawn "manage-brightness --up"; }
-                XF86MonBrightnessDown allow-when-locked=true { spawn "manage-brightness --down"; }
+                XF86MonBrightnessUp allow-when-locked=true { spawn-sh "manage-brightness --up"; }
+                XF86MonBrightnessDown allow-when-locked=true { spawn-sh "manage-brightness --down"; }
 
                 // Open/close the Overview: a zoomed-out view of workspaces and windows.
                 Mod+O repeat=false { toggle-overview; }
