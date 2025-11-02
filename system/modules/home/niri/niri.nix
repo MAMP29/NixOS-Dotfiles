@@ -263,7 +263,7 @@
             input {
                 keyboard {
                     xkb {
-                        layout "en,es"
+                        layout "us,es"
                         options "grp:win_space_toggle"
                     }
                     track-layout "global"
@@ -330,7 +330,7 @@
                 }
                 default-column-width { proportion 0.5; }
                 focus-ring {
-                    width 2
+                    width 3
                     active-color "#${config.stylix.base16Scheme.base03}"
                     inactive-color "#${config.stylix.base16Scheme.base0D}"
                     urgent-color "#${config.stylix.base16Scheme.base0E}"
@@ -433,10 +433,11 @@
 
                 // Suggested binds for running programs: terminal, app launcher, screen locker.
                 Mod+T hotkey-overlay-title="Open a Terminal: Kitty" { spawn "kitty"; }
-                Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn "rofi -show drun -theme .config/rofi/theme.rasi"; }
+                Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun"; }
                 Mod+A { spawn-sh "kitty --class clipse -e 'clipse'"; }
                 Mod+P { spawn "niri-color-picker"; }
                 Mod+E { spawn "nemo"; }
+                Mod+N { spawn-sh "swaync-client -t "; }
                 Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
                 Mod+Escape { spawn "wlogout"; }
 
