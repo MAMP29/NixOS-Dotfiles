@@ -6,7 +6,7 @@
     layout = [
       {
           "label" = "lock";
-          "action" = "loginctl lock-session";
+          "action" = "hyprlock";
           "text" = "Lock";
           "keybind" = "l";
       }
@@ -24,7 +24,7 @@
       }
       {
           "label" = "logout";
-          "action" = "hyprctl dispatch exit || pkill Hyprland || loginctl terminate-user $USER";
+          "action" = "niri msg quit || pkill niri || loginctl terminate-user $USER";
           "text" = "Logout";
           "keybind" = "e";
       }

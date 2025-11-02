@@ -1,6 +1,7 @@
 { config, pkgs, ... }: {
   programs.waybar = {
     enable = true;
+    systemd.target = "niri.service";
     settings = {
       # --- Configuración Principal de la Barra ---
       mainBar = {

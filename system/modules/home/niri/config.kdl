@@ -75,7 +75,9 @@ layout {
         inactive-color "#505050"
         urgent-color "#9b0000"
     }
-    border { }
+    border {
+        width 0
+    }
     shadow { }
     struts {
         left 0

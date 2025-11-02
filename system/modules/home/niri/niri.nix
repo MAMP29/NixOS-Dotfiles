@@ -335,7 +335,9 @@
                     inactive-color "#${config.stylix.base16Scheme.base0D}"
                     urgent-color "#${config.stylix.base16Scheme.base0E}"
                 }
-                border { }
+                border {
+                    width 0
+                }
                 shadow { }
                 struts {
                     left 0
@@ -347,10 +349,11 @@
 
             // Add lines like this to spawn processes at startup.
             // Note that running niri as a session supports xdg-desktop-autostart,
-            // Waybar, swaync. swayidle estan en el home, por lo que no seran necesarios
+            // Waybar, swayidle estan en el home con systemd-target, por lo que no seran necesarios
             spawn-at-startup "swww-daemon"
             spawn-at-startup "clipse -listen"
             spawn-at-startup "exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+            spawn-at-startup "swaync"
 
             hotkey-overlay {
                 skip-at-startup
@@ -400,7 +403,7 @@
 
             window-rule {
                 match app-id="clipse"
-                default-column-width { fixed 622; }
+                default-column-width { fixed 722; }
                 default-window-height { fixed 652; }
             }
 
@@ -430,7 +433,7 @@
 
                 // Suggested binds for running programs: terminal, app launcher, screen locker.
                 Mod+T hotkey-overlay-title="Open a Terminal: Kitty" { spawn "kitty"; }
-                Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn "rofi"; }
+                Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn "rofi -show drun -theme .config/rofi/theme.rasi"; }
                 Mod+A { spawn-sh "kitty --class clipse -e 'clipse'"; }
                 Mod+P { spawn "niri-color-picker"; }
                 Mod+E { spawn "nemo"; }
