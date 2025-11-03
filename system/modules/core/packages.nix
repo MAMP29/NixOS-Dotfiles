@@ -5,7 +5,6 @@
     #hyprland.enable = true;
     firefox.enable = true;
     zsh.enable = true;
-    xwayland.enable = true;
   };
 
   nixpkgs.config.allowUnfree = true;

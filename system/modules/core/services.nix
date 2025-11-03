@@ -9,7 +9,6 @@
     thermald.enable = true;
     udisks2.enable = true;
     blueman.enable = true; # Bluetooth Support
-    xserver.enable = true;
 
     # Para monitorear los SSD
     smartd = {
