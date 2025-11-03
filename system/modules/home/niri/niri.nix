@@ -375,6 +375,10 @@
                 "_JAVA_AWT_WM_NONREPARENTING" "1"
             }
 
+            xwayland-satellite {
+                path "/etc/profiles/per-user/mamp/bin/xwayland-satellite"
+            }
+
             screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
             window-rule {
