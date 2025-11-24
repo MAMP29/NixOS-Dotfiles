@@ -43,6 +43,7 @@
     pavucontrol
     #tidal-hifi
     evince
+    polkit_gnome # Polkit
 
     # Herramientas de Desarrollo y CLI de Usuario
     ripgrep

@@ -3,6 +3,7 @@
     ./fastfetch/fastfetch.nix
     ./git.nix
     ./gtk.nix
+    ./hypr/hypridle.nix
     ./hypr/hyprlock.nix
     ./jetbrains.nix
     ./kitty.nix

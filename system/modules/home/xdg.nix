@@ -55,12 +55,6 @@ in
 
     configFile."mimeapps.list".force = true;
 
-    portal = {
-      enable = true;
-      extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
-      configPackages = [ pkgs.hyprland ];
-    };
-
     userDirs = {
       enable = true;
       createDirectories = true; # Crea los directorios si no existen
