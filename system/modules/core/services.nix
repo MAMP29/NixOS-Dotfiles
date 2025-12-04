@@ -23,5 +23,7 @@
       alsa.support32Bit = true;
       jack.enable = true;
     };
+
+    gnome.gnome-keyring.enable = true;
   };
 }

@@ -4,6 +4,7 @@
   imports = [
     ./boot.nix
     ./containers.nix
+    ./enviromental.nix
     ./fonts.nix
     ./greetd.nix
     ./hardware.nix
@@ -16,5 +17,6 @@
     ./stylix.nix
     ./system.nix
     ./user.nix
+    ./xdg-portals.nix
   ];
 }

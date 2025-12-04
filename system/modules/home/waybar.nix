@@ -1,6 +1,7 @@
 { config, pkgs, ... }: {
   programs.waybar = {
     enable = true;
+    systemd.enable = true;
     settings = {
       # --- Configuración Principal de la Barra ---
       mainBar = {
