@@ -87,7 +87,7 @@
             "weeks-pos" = "right";
             "on-scroll" = 1;
             format = {
-              # Colores dinámicos tomados de tu configuración de Stylix
+              # Colores dinámicos tomados de la configuración de Stylix
               months = "<span color='#${config.stylix.base16Scheme.base0D}'><b>{}</b></span>";      # Base0D
               days = "<span color='#${config.stylix.base16Scheme.base05}'><b>{}</b></span>";          # Base05
               weeks = "<span color='#${config.stylix.base16Scheme.base0C}'><b>W{}</b></span>";       # Base0C
@@ -169,7 +169,7 @@
         "custom/swaync" = {
           tooltip = true;
           "tooltip-format" = "Left Click: Launch Notification Center\nRight Click: Do not Disturb";
-          format = "{icon} {}";
+          format = "{icon} {text}";
           "format-icons" = {
             notification = "<span foreground='red'><sup></sup></span>";
             none = "";
