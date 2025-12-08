@@ -6,17 +6,22 @@ in
 {
   programs.git = {
     enable = true;
-    userName = "${gitUserName}";
-    userEmail = "${gitEmail}";
-       
-    extraConfig = {
-      init.defaultBranch = "main";
-    };
+    
+    settings = {
+      user = {
+        name = "${gitUserName}";
+        email = "${gitEmail}";
+      };
 
-    aliases = {
-      st = "status";
-      cm = "commit --message";
-      co = "checkout";
+      init = {
+        defaultBranch = "main";
+      };
+
+      alias = {
+        st = "status";
+        cm = "commit --message";
+        co = "checkout";
+      };
     };
   }; 
 }
