@@ -9,6 +9,10 @@
       };
     };
     bat.enable = true;
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
   };
 
   home.packages = with pkgs; [
@@ -41,6 +45,7 @@
     gnome-disk-utility
     nemo-with-extensions
     pavucontrol
+    telegram-desktop
     #tidal-hifi
     evince
     polkit_gnome # Polkit
