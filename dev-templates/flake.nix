@@ -4,8 +4,8 @@
   outputs = { self }: {
     templates = {
       # Python - pyproject
-      python-pyproject = {
-        path = ./templates/python-pyproject;
+      pyproject = {
+        path = ./templates/pyproject;
         description = "Entorno de Python con pyproject y direnv";
       };
 
