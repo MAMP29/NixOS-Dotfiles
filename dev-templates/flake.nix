@@ -21,6 +21,12 @@
         description = "Entorno de Java (Zulu 21) con Maven y direnv";
       };
 
+      # Go
+      go-dev = {
+        path = ./templates/go-dev;
+        description = "Entorno de Goland";
+      };
+
       # NodeJs
       nodejs = {
         path = ./templates/nodejs;
