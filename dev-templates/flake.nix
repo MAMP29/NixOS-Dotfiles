@@ -9,6 +9,12 @@
         description = "Entorno de Python con pyproject y direnv";
       };
 
+      # Python - Pyproject - uv
+      pyuvs = {
+        path = ./templates/pyuv;
+        description = "Entorno de Python con pyproject, uv y direnv";
+      };
+
       #  Java - Gradle
       java-gradle = {
         path = ./templates/java-gradle;
