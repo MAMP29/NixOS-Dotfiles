@@ -8,6 +8,8 @@
       cudatoolkit
       intel-media-driver
       intel-compute-runtime
+      libvdpau-va-gl
+      vpl-gpu-rt
     ];
   };
 
