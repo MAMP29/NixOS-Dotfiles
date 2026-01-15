@@ -7,10 +7,17 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake/beta";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+     };
+    };
     stylix.url = "github:danth/stylix/release-25.11";
   };
 
-  outputs = { nixpkgs, nixpkgs-unstable, home-manager, stylix, ... } @ inputs: let
+  outputs = { nixpkgs, nixpkgs-unstable, home-manager, zen-browser, stylix, ... } @ inputs: let
       system = "x86_64-linux";
       pkgs-unstable = import nixpkgs-unstable {
         inherit system;

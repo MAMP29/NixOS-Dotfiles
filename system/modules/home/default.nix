@@ -15,6 +15,7 @@
     ./waybar.nix
     ./wlogout/wlogout.nix
     ./xdg.nix
+    ./zen-browser.nix
     ./zsh.nix
   ];
 }
