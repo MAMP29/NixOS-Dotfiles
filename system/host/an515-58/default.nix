@@ -5,7 +5,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../modules/core
-      inputs.stylix.nixosModules.stylix
+      ./../../modules/desktop/hyprland # Recuerda deshabilitar a nivel de home al momento de cambiar de escritorio
     ];
 
   services = {

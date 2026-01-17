@@ -1,19 +1,13 @@
 {
   imports = [
+    ./../desktop/hyprland/home
     ./fastfetch/fastfetch.nix
     ./git.nix
     ./gtk.nix
-    ./hypr/hypridle.nix
-    ./hypr/hyprlock.nix
     ./jetbrains.nix
     ./kitty.nix
-    ./rofi.nix
-    ./stylix.nix
-    ./swaync.nix
     ./utils-apps.nix
     ./vscode.nix
-    ./waybar.nix
-    ./wlogout/wlogout.nix
     ./xdg.nix
     ./zen-browser.nix
     ./zsh.nix

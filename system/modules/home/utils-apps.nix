@@ -1,5 +1,5 @@
 { config, pkgs, pkgs-unstable, ... }:
-
+# CAMBIADO
 {
   programs = {
     btop = {
@@ -20,19 +20,19 @@
     # Navegador
     brave
     
-    # Componentes de la UI de Hyprland
     libnotify
-    swww
+    # Componentes de la UI de Hyprland
+    /* swww
     waypaper
     hyprpicker
     grim          # screenshots
     slurp         # seleccionar área
     grimblast
-    clipse # Portapaleles tui
+    clipse # Portapaleles tui */
 
     # Aplicaciones GUI
-    networkmanagerapplet
-    blueman
+    # networkmanagerapplet
+    # blueman
     gnome-calculator
     obs-studio
     libreoffice-fresh

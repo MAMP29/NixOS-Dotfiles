@@ -17,8 +17,5 @@
         })
       '';
     };
-    pam = {
-      services.hyprlock = {};
-    };
   };
 }
