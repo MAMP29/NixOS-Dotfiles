@@ -2,7 +2,6 @@
 
 {
   programs = {
-    hyprland.enable = true;
     firefox.enable = true;
     zsh.enable = true;
   };
@@ -31,9 +30,9 @@
     bc
     tldr
 
-    # Cosas de hyprland
+/*     # Cosas de hyprland
     hypridle # Demonio de inactividad que se ejecuta a nivel de sistema/sesión.
-    
+     */
    ];
 }
 
