@@ -17,5 +17,6 @@
         })
       '';
     };
+    pam.services.greetd.enableGnomeKeyring = true;
   };
 }
