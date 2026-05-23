@@ -1,4 +1,8 @@
-{ config, pkgs, pkgs-unstable, ... }:
+{
+  pkgs,
+  pkgs-unstable,
+  ...
+}:
 # CAMBIADO
 {
   programs = {
@@ -15,47 +19,53 @@
     };
   };
 
-  home.packages = with pkgs; [
+  home.packages =
+    with pkgs;
+    [
 
-    # Navegador
-    brave
-    
-    libnotify
-    # Componentes de la UI de Hyprland
-    /* swww
-    waypaper
-    hyprpicker
-    grim          # screenshots
-    slurp         # seleccionar área
-    grimblast
-    clipse # Portapaleles tui */
+      # Navegador
+      brave
 
-    # Aplicaciones GUI
-    # networkmanagerapplet
-    # blueman
-    gnome-calculator
-    obs-studio
-    libreoffice-fresh
-    gnome-clocks
-    upscaler
-    switcheroo
-    handbrake
-    file-roller
-    eog
-    gnome-disk-utility
-    nemo-with-extensions
-    pavucontrol
-    telegram-desktop
-    #tidal-hifi
-    evince
-    polkit_gnome # Polkit
+      libnotify
+      # Componentes de la UI de Hyprland
+      /*
+        swww
+        waypaper
+        hyprpicker
+        grim          # screenshots
+        slurp         # seleccionar área
+        grimblast
+        clipse # Portapaleles tui
+      */
 
-    # Herramientas de Desarrollo y CLI de Usuario
-    ripgrep
-    tree
-  ] ++ (with pkgs-unstable; [
-    mission-center
-    nvme-cli
-    eza
-  ]);
+      # Aplicaciones GUI
+      # networkmanagerapplet
+      # blueman
+      gnome-calculator
+      obs-studio
+      libreoffice-fresh
+      gnome-clocks
+      upscaler
+      switcheroo
+      handbrake
+      file-roller
+      eog
+      gnome-disk-utility
+      nemo-with-extensions
+      pavucontrol
+      telegram-desktop
+      #tidal-hifi
+      evince
+      polkit_gnome # Polkit
+      zotero
+
+      # Herramientas de Desarrollo y CLI de Usuario
+      ripgrep
+      tree
+    ]
+    ++ (with pkgs-unstable; [
+      mission-center
+      nvme-cli
+      eza
+    ]);
 }
