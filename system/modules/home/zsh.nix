@@ -10,6 +10,8 @@
     btw = "echo i use nixos btw";
   };
 
+  dotDir = "${config.xdg.configHome}/zsh";
+
   oh-my-zsh = {
     enable = true;
     plugins = [ "git" ];
@@ -19,6 +21,6 @@
   programs.oh-my-posh = {
     enable = true;
     useTheme = "atomic";
-    enableZshIntegration = true;    
+    enableZshIntegration = true;
   };
 }

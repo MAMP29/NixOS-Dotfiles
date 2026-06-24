@@ -1,10 +1,10 @@
 {
   description = "Flake de configuración de sistema NixOS";
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.11";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zen-browser = {
@@ -12,12 +12,21 @@
       inputs = {
         nixpkgs.follows = "nixpkgs";
         home-manager.follows = "home-manager";
-     };
+      };
     };
-    stylix.url = "github:danth/stylix/release-25.11";
+    stylix.url = "github:danth/stylix/release-26.05";
   };
 
-  outputs = { nixpkgs, nixpkgs-unstable, home-manager, zen-browser, stylix, ... } @ inputs: let
+  outputs =
+    {
+      nixpkgs,
+      nixpkgs-unstable,
+      home-manager,
+      zen-browser,
+      stylix,
+      ...
+    }@inputs:
+    let
       system = "x86_64-linux";
       pkgs-unstable = import nixpkgs-unstable {
         inherit system;
@@ -25,7 +34,8 @@
       };
       username = "mamp";
       host = "an515-58";
-    in { 
+    in
+    {
       nixosConfigurations = {
         nixos-nitro = nixpkgs.lib.nixosSystem {
           inherit system;

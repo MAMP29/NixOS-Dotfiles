@@ -1,24 +1,47 @@
-{ config, lib, pkgs,  ... }:
+{
+  config,
+  lib,
+  ...
+}:
 with lib;
 let
   defaultApps = {
     text = [ "helix.desktop" ];
-    image = [ "org.gnome.eog.desktop" ];        # Eye of GNOME
+    image = [ "org.gnome.eog.desktop" ]; # Eye of GNOME
     audio = [ "mpv.desktop" ];
-    video = [ "mpv.desktop" ];                  # MPV para videos
+    video = [ "mpv.desktop" ]; # MPV para videos
     directory = [ "nemo.desktop" ];
-    office = [ "libreoffice-writer.desktop" "libreoffice-calc.desktop" "libreoffice-impress.desktop" ];
+    office = [
+      "libreoffice-writer.desktop"
+      "libreoffice-calc.desktop"
+      "libreoffice-impress.desktop"
+    ];
     pdf = [ "org.gnome.Evince.desktop" ];
-    terminal = [ "kitty.desktop" ];             # Kitty
+    terminal = [ "kitty.desktop" ]; # Kitty
     archive = [ "org.gnome.FileRoller.desktop" ];
-    browser = [ "brave-browser.desktop" ];      # Brave
+    browser = [ "brave-browser.desktop" ]; # Brave
   };
 
   mimeMap = {
     text = [ "text/plain" ];
-    image = [ "image/jpeg" "image/png" "image/gif" "image/webp" "image/svg+xml" ];
-    audio = [ "audio/mpeg" "audio/ogg" "audio/wav" "audio/flac" ];
-    video = [ "video/mp4" "video/x-matroska" "video/webm" ];
+    image = [
+      "image/jpeg"
+      "image/png"
+      "image/gif"
+      "image/webp"
+      "image/svg+xml"
+    ];
+    audio = [
+      "audio/mpeg"
+      "audio/ogg"
+      "audio/wav"
+      "audio/flac"
+    ];
+    video = [
+      "video/mp4"
+      "video/x-matroska"
+      "video/webm"
+    ];
     directory = [ "inode/directory" ];
     office = [
       "application/vnd.oasis.opendocument.text"
@@ -29,8 +52,18 @@ let
       "application/vnd.openxmlformats-officedocument.presentationml.presentation"
     ];
     pdf = [ "application/pdf" ];
-    archive = [ "application/zip" "application/x-rar" "application/x-7z-compressed" "application/x-tar" "application/gzip" ];
-    browser = [ "text/html" "x-scheme-handler/http" "x-scheme-handler/https" ];
+    archive = [
+      "application/zip"
+      "application/x-rar"
+      "application/x-7z-compressed"
+      "application/x-tar"
+      "application/gzip"
+    ];
+    browser = [
+      "text/html"
+      "x-scheme-handler/http"
+      "x-scheme-handler/https"
+    ];
   };
 
   associations =
@@ -41,7 +74,7 @@ let
           key: types: map (type: attrsets.nameValuePair type defaultApps."${key}") types
         ) mimeMap
       )
-  );
+    );
 in
 {
   # Directorios XDG en inglés
@@ -58,6 +91,7 @@ in
     userDirs = {
       enable = true;
       createDirectories = true; # Crea los directorios si no existen
+      setSessionVariables = false;
       desktop = "${config.home.homeDirectory}/Desktop";
       documents = "${config.home.homeDirectory}/Documents";
       download = "${config.home.homeDirectory}/Downloads";
@@ -71,17 +105,17 @@ in
 
   # Persistencia para estos directorios
 
- # home.persistence."/persist/home/${config.home.username}" = {
- #   directories = [
- #     "Desktop"
- #     "Documents"
- #     "Downloads"
- #     "Music"
- #     "Pictures"
- #     "Videos"
- #     "Public"
- #     "Templates"
- #   ];
- #   allowOther = true;
- # };
+  # home.persistence."/persist/home/${config.home.username}" = {
+  #   directories = [
+  #     "Desktop"
+  #     "Documents"
+  #     "Downloads"
+  #     "Music"
+  #     "Pictures"
+  #     "Videos"
+  #     "Public"
+  #     "Templates"
+  #   ];
+  #   allowOther = true;
+  # };
 }
