@@ -1,9 +1,9 @@
 { config, pkgs, pkgs-unstable, ... }:
 
 {
-  home.packages = with pkgs; [   
+  home.packages = with pkgs; [
     # Componentes de la UI de Hyprland
-    swww
+    awww
     waypaper
     hyprpicker
     grim          # screenshots
