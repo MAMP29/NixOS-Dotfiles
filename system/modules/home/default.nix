@@ -11,7 +11,6 @@
     ./vscode.nix
     ./xdg.nix
     ./zed.nix
-    ./zen-browser.nix
     ./zsh.nix
   ];
 }
