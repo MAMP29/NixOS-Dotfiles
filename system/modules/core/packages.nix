@@ -29,19 +29,5 @@
     nmap
     bc
     tldr
-
-/*     # Cosas de hyprland
-    hypridle # Demonio de inactividad que se ejecuta a nivel de sistema/sesión.
-     */
    ];
 }
-
-
-
-    #(lutris.override {
-    #  extraPkgs = pkgs: [
-    #    winetricks
-    #  ];
-    #})
-    # wine-staging
-    # mangohud

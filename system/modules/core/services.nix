@@ -3,7 +3,7 @@
 {
   services = {
     libinput.enable = true; # Enable touchpad support (enabled default in most desktopManager).
-    openssh.enable = true;
+    openssh.enable = false; # No usado por ahora
     fstrim.enable = true; # Activa TRIM para el nvme
     gvfs.enable = true; # Para nemo, montaje USB y mas
     thermald.enable = true;

@@ -17,6 +17,10 @@
         })
       '';
     };
-    pam.services.greetd.enableGnomeKeyring = true;
+    pam.services = {
+      login.enableGnomeKeyring = true;
+      greetd.enableGnomeKeyring = true;
+      greetd-password.enableGnomeKeyring = true;
+    };
   };
 }

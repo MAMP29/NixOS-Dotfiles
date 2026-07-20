@@ -30,7 +30,7 @@
       {
         "enable-crash-reporter": true,
         "crash-reporter-id": "c93a0a9e-2861-4c1a-bda5-7cff36314259",
-        "password-store": "gnome"
+        "password-store": "gnome-libsecret"
       }
     '';
   };
