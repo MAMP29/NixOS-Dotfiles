@@ -3,7 +3,7 @@
   pkgs-unstable,
   ...
 }:
-# CAMBIADO
+
 {
   programs = {
     btop = {
@@ -27,20 +27,7 @@
       brave
 
       libnotify
-      # Componentes de la UI de Hyprland
-      /*
-        swww
-        waypaper
-        hyprpicker
-        grim          # screenshots
-        slurp         # seleccionar área
-        grimblast
-        clipse # Portapaleles tui
-      */
 
-      # Aplicaciones GUI
-      # networkmanagerapplet
-      # blueman
       gnome-calculator
       obs-studio
       libreoffice-fresh
@@ -62,6 +49,7 @@
       # Herramientas de Desarrollo y CLI de Usuario
       ripgrep
       tree
+      code-cursor
     ]
     ++ (with pkgs-unstable; [
       mission-center

@@ -35,7 +35,7 @@ in
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../../modules/core
-    ./../../modules/desktop/hyprland # Recuerda deshabilitar a nivel de home al momento de cambiar de escritorio
+    ./../../modules/desktop/hyprland # Deshabilitar a nivel de home al momento de cambiar de escritorio
   ];
 
   services = {
