@@ -50,6 +50,7 @@
       ripgrep
       tree
       code-cursor
+      bruno
     ]
     ++ (with pkgs-unstable; [
       mission-center
