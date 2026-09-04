@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   programs = {
@@ -15,10 +15,10 @@
     git
     cudatoolkit
     htop
-    
-     # Utilidades de Bajo Nivel
+
+    # Utilidades de Bajo Nivel
     pamixer
-    wl-clipboard  # portapapeles
+    wl-clipboard # portapapeles
     playerctl
 
     # Multimedia
@@ -29,5 +29,8 @@
     nmap
     bc
     tldr
-   ];
+
+    # Juegos
+    heroic
+  ];
 }

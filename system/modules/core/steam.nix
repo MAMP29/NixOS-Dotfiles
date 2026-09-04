@@ -1,10 +1,10 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 let
   # Gracias a Silk por esta build para gamescope: https://codeberg.org/Silk/silkos
   gamescope-git = pkgs.gamescope.overrideAttrs (old: {
     version = "unstable-20251206105151-9416ca";
-    NIX_CFLAGS_COMPILE = (old.NIX_CFLAGS_COMPILE or []) ++ [ "-fno-fast-math" ];
+    NIX_CFLAGS_COMPILE = (old.NIX_CFLAGS_COMPILE or [ ]) ++ [ "-fno-fast-math" ];
 
     src = pkgs.fetchFromGitHub {
       owner = "ValveSoftware";
@@ -22,6 +22,18 @@ let
   });
 in
 {
+  hardware = {
+    xpadneo.enable = true;
+    steam-hardware.enable = true;
+
+  };
+  services.udev.extraRules = ''
+    # Mando 8BitDo Ultimate 2 (Vendor ID: 2dc8)
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="2dc8", MODE="0666", TAG+="uaccess"
+
+    # Modo X-Input genérico (El control se identifica como mando de Microsoft)
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="045e", MODE="0666", TAG+="uaccess"
+  '';
   programs = {
     steam = {
       enable = true;
@@ -29,12 +41,12 @@ in
       dedicatedServer.openFirewall = false;
       extest.enable = true;
       protontricks.enable = true;
-      extraCompatPackages = [pkgs.proton-ge-bin];
+      extraCompatPackages = [ pkgs.proton-ge-bin ];
       gamescopeSession = {
-          enable = true;
-          steamArgs = [
-            "-pipewire-dmabuf"
-          ];
+        enable = true;
+        steamArgs = [
+          "-pipewire-dmabuf"
+        ];
       };
     };
 
