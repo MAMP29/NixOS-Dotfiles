@@ -32,5 +32,8 @@
 
     # Juegos
     heroic
+    lutris
+    winetricks
+    wineWow64Packages.staging
   ];
 }
