@@ -43,10 +43,11 @@ in
 
     upower = {
       enable = true;
-      percentageLow = 20;
-      percentageCritical = 5;
-      percentageAction = 3;
-      criticalPowerAction = "PowerOff";
+      percentageLow = 15;
+      percentageCritical = 8;
+      percentageAction = 5;
+      # Hibernate instead of PowerOff: safer if the EC/BMS gauge glitches
+      criticalPowerAction = "Hibernate";
     };
   };
 
